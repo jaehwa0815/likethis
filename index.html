@@ -1,0 +1,236 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+        text-decoration: none;
+        color:black;
+    }
+    .side-menu{
+        display: block;
+        position:relative;
+        background-color: lightgray;
+    }
+    .side-menu-1{
+        background-color: orange;
+    }
+    
+    .title{
+        position: fixed;
+        display: block;
+        margin-top: 50px;
+        background-color: pink;
+        width: 500px;
+        height: 100px;
+        left: 40px;
+       
+    }
+    .title1{
+        position: relative;
+        top:36px;
+        left:30px; 
+    }
+    .title1>ul>li{
+        list-style: none;
+        background-color: white;
+        display: inline;
+        margin-left:20px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.1em;
+         
+
+    }
+    .side-menu-2{
+        background-color: aqua;
+
+    }
+    .side-menu-2 > ul{
+        margin-left: 10px;
+        list-style: none;
+        font-family: serif;
+        font-size: 1.5em;
+        
+    }
+
+
+    table{
+        border: 1px solid black;
+        border-radius: 4px;
+        border-collapse: collapse;
+    }
+    .table{
+        position: relative;
+        width:800px;
+        height:150px;
+        background-color: aquamarine;
+        left:380px;
+        margin-top: 200px;
+    }
+    .table1{
+        position: relative;
+        text-align: center;
+        left:200px;
+    }
+    table > thead > tr > th{
+        border-bottom: 2px solid black;
+        border-left:1px solid black;
+    }
+    table > tbody > tr > td {
+        border-bottom: 1px solid black;
+        border-left:1px solid black;
+    }
+    #first{
+       text-align : center;
+    }
+
+   .btn{
+       background-color: skyblue;
+       color: white;
+       width: 60px;
+       height: 30px;
+       font-size: 0.6em;
+       text-align: center;
+       line-height: 30px;
+       border: 1px solid black;
+       border-radius: 4px;
+       cursor: pointer;
+   }
+   .name > span:first-child{
+       color: gray;
+   }
+   span{
+       background-color: lightcoral;
+   }
+   .fixed{
+       top:0px;
+       right: 10px;
+       padding: 4px;
+       position: fixed;
+       width:300px;
+       height:50px;
+       border: 1px solid black;
+       background-color: palevioletred;
+   }
+   .absolute{
+       background-color: brown;
+       margin: 100px;
+       height: 100px;
+   }
+   .absolute1{
+        vertical-align:top;
+       position:absolute;
+       text-align: center;
+       line-height: 40px;
+       height: 40px;
+       background-color: blueviolet;
+       width :500px;
+       
+       
+   }
+</style>
+</head>
+
+<body>
+<form action="loginAction" method="post">
+        <nav>
+        <div class="side-menu">
+            <div class="side-menu-1">
+                yes
+            </div>
+
+            <div class="side-menu-2">
+            <ul>
+                <li>
+                    <label><input type="radio" name="fruit" id="orange">오렌지</label>
+                    <label><input type="radio" name="fruit" id="melon">메론</label>
+                    <label><input type="radio" name="fruit" id="strawberry">딸기</label>
+                </li>
+                <li>
+                    <div class="btn">
+                        클릭
+                    </div>
+                </li>
+                <li></li>
+            </ul>
+            </div>
+
+        </div>
+        </nav>
+
+<div class ="title">
+    <div class="title1">
+    <ul>
+    <li id="a">TOP</li>
+    <li id="b">OUTER</li>
+    <li id="c">BOTTOM</li>
+    <li id="d">ACC</li>
+    </ul>
+</div>
+</div>
+
+<div class="table">
+    <h2>테이블입니다</h2>
+<table class="table1">
+    
+    <thead>
+    <tr>
+        <th>제목 </th>
+        <th>이름</th>
+        <th>저자</th>
+        <th>소감</th>
+    </tr>    
+    </thead>
+    <tbody>
+        <tr>
+        <td>침묵</td>
+        <td>엔도</td>
+        <td>슈사쿠</td>
+        <td>어썸</td>
+         </tr>
+        <tr>
+            <td rowspan="3" colspan= "2" id="first" >
+                합계
+            </td>
+            <td>유후</td>
+            <td>유후1</td>
+
+        </tr> 
+        <tr>
+            <td>
+                relative:현재위치에서 움직임
+            </td>
+            <td>유후1</td>
+        </tr>   
+        <tr>
+            <td>
+               이야1
+            </td>
+            <td>유후1</td>
+        </tr>   
+    </tbody>
+</table>
+</div>
+<div class="absolute">
+<div class="absolute1">
+    <div>
+    abolute : 좌표에 의해서 움직임
+    </div>
+</div>
+</div>
+<div class="fixed">
+        <div class="name">
+           <span>나의</span>
+           <span>이름은</span>
+           <span>dlwoghk</span>
+           <span>fixed:브라우저 기준으로 움직임</span>
+        </div>    
+    </div>
+</form>
+</body>
+
+
+</html>

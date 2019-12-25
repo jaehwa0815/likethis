@@ -1,0 +1,80 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <style>
+    *{
+        margin:0px;
+        padding:0px;
+        list-style: none;
+        text-decoration: none;
+        color: pink;
+    }
+    .container{
+		position:relative;
+		display:block;
+		margin: 0 auto;
+		background-color: whitesmoke;
+		width: 1200px;
+        height: 800px;    
+        top:30px;
+    }
+    .main{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        top: 150px;
+        width:350px;
+    }
+    .main > h1{
+        margin: 10px;
+        color: blue;
+    }
+    .main1{
+        position: inline;
+        display: flex;
+        border: 1px solid black;
+        width: 280px;
+        height: 150px;
+        padding :10px;
+        margin: 0 auto;
+        top: 10px;
+    }
+    #btn{
+        width: 100px;
+        height: 50px;
+        font-size: 1.5em;
+        margin-left:15px;
+        margin-top:12px;
+    }
+    .main1>ul>li{
+        height: 20px;
+        margin-top:10px;
+    }
+    </style>
+    <form action="loginAction" method="post">
+        <div class ="container">
+            <div class="main">
+                <h1>Login</h1>
+                <div class="main1">
+                    <ul>
+                    <li><label><input type="text" name="userId" value="ID"></label></li>
+                    <li><label><input tpye="password" name="userPassword" value="password"></label></li>
+                    <li><a href="Action?command=join">join</a></li>     
+                    </ul>
+                    <div>
+                        <input type="submit" value="click" id="btn"></li>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+
+</body>
+
+</html>

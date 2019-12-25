@@ -1,0 +1,118 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>index</title>
+<style>
+    body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+    button{
+        all: unset;
+        background-color: steelblue;
+        color: white;
+        padding: 5px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .modal{
+        position: fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal_overlay{
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+         
+    }
+
+    .modal_content{
+        background-color: white;
+        padding: 50px 100px;
+        text-align: center;
+        position: relative;
+        border-radius: 10px;
+        width:30%;
+        left: 30%;
+        top: 30%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+         
+    
+    }
+    h1{
+        margin:10;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+  </style>
+  </head>  
+<body>
+<button id="open">open modal </button>
+<div class ="modal hidden">
+    <div class="modal_overlay">
+        <div class="modal_content">
+            <from action="/Action?command=comment" method="post">
+            <h1>i m a modal</h1>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td rowspan="2">title</td>
+                        <td><input type="textarea"></td>  
+                    </tr>    
+                </thead>
+                <tbody>
+                    <tr>
+                       
+                    </tr>     
+
+                </tbody>
+
+
+            </table>
+        </from>
+            <button>X</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const className = "hidden";
+    const openButton = document.getElementById("open");
+    const modal = document.querySelector(".modal");
+    const overlay = modal.querySelector(".modal_overlay");
+    const closeBtn = modal.querySelector("button");
+    const openModal = () => {
+        if(modal.classList.contains(className)){
+        modal.classList.remove(className);
+        }
+    }
+    const closeModal = () =>{
+        if(!modal.classList.contains(className)){
+        modal.classList.add(className);
+        }
+    }
+    //overlay.addEventListener("click",closeModal);
+    closeBtn.addEventListener("click",closeModal);
+    openButton.addEventListener("click",openModal);
+
+
+</script>
+
+</body>
+
+
+</html>
