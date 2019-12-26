@@ -14,11 +14,12 @@ body{
     text-align: center;
 }
 .form,
-.greethigs {
+.greethigs{
     display: none;
     
 }
-.showing{
+.showing,
+.js-weather{
     display: block;
     text-align: center;
 }
