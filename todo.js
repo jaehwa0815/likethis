@@ -12,9 +12,10 @@ function save(){
 function handleSubmit(event){
     event.preventDefault();
     const currentValue = toDoInput.value;
+    if(currentValue !== null && currentValue !== ""){
     paintText(currentValue);
-    save();
     toDoInput.value = "";
+    }
 }
 
 function deleteToDos (event){
@@ -45,7 +46,7 @@ function paintText(text){
         id : newId
     }
     toDos.push(toDosObject);
-    
+    save();
 
 }
 

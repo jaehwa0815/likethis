@@ -4,20 +4,25 @@ greeting= document.querySelector(".js-greetings");
 
 const localName = "currentUser" 
 const SHOW_ON ="showing";
-
+ 
 function paintGreeting(text){
     form.classList.remove(SHOW_ON);
     greeting.innerText = `hello ${text}`
 }
-function save(text){
+
+function saveText(text){
     localStorage.setItem(localName,text);
 }
+
 function handleSubmit(event){
     event.preventDefault();
     const inputValue = input.value;
-    paintGreeting(inputValue);
-    save(inputValue);
+    if (inputValue !== null && inputValue !== ""){
+    paintGreeting(inputValue); 
+    saveText(inputValue);
+    }
 }
+
 function askForName(){
     form.classList.add(SHOW_ON);
     form.addEventListener("submit",handleSubmit)
